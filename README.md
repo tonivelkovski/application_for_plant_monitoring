@@ -94,4 +94,4 @@ npm run resetDB
 
 
 ## Documentation
-
+Documentation can be accessed via [Documentation](https://github.com/tonivelkovski/application_for_plant_monitoring/tree/main/Documentation) folder.
