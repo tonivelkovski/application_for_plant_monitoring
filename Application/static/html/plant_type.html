@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vrsta Biljaka</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/css/type.css">
+
+</head>
+
+<body>
+    <nav class="navbar" style="align-items: center; justify-content: center;">
+        <ul class="nav justify-content-center navbar-nav">
+            <li><b><a href="/">Početna stranica</a></b></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1 id="pageTitle">Vrsta biljaka:</h1>
+
+        <div class="btn-group">
+            <button class="btn" onclick="setFormAction('add'); openForm('add')">Dodaj Biljku</button>
+        </div>
+
+        <table class="table table-bordered" id="vrstaTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Naziv</th>
+                    <th>Datum sadnje</th>
+                    <th>Datum idućih zadataka</th>
+                    <th>Broj slika</th>
+                    <th>Broj aktivnih zadataka</th>
+                    <th>Uredi biljku</th>
+                    <th>Obriši biljku</th>
+                    <th>Galerija slika</th>
+                    <th>Popis zadataka</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <div id="addEditForm" class="modal">
+        <span class="close" onclick="closeForm()">&times;</span>
+        <h2 id="formTitle">Dodaj Biljku</h2>
+        <form id="plantForm">
+            <label for="name">Naziv biljke:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="plantingDate">Datum sadnje:</label>
+            <input type="text" id="plantingDate" name="plantingDate" class="datepicker" required><br>
+
+            <button type="button" onclick="submitForm(getFormAction())">Spremi</button>
+        </form>
+    </div>
+
+    <div class="overlay" onclick="closeForm()"></div>
+
+    <script src="../js/plant_type.js"></script>
+</body>
+
+</html>

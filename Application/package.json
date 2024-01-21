@@ -1,0 +1,22 @@
+{
+  "name": "monitor-plants",
+  "version": "1.0.0",
+  "description": "Application to monitor and help maintain plant growth.",
+  "main": "app.js",
+  "scripts": {
+    "initDB": "cd Database && psql -f Create.sql postgresql://postgres:3472@localhost",
+    "resetDB": "cd Database && psql -f Delete.sql postgresql://postgres:3472@localhost",
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Toni Velkovski",
+  "license": "GPL-2.0-only",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mime-types": "^2.1.35",
+    "multer": "^1.4.5-lts.1",
+    "pg": "^8.11.3"
+  }
+}

@@ -1,0 +1,63 @@
+body {
+    background: #F1D8CD;
+    padding: 20px;
+}
+
+#vrstaTable {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#vrstaTable th,
+#vrstaTable td {
+    text-align: center;
+    padding: 8px;
+    border: 2px solid white;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    max-width: 400px;
+    max-height: 400px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: auto;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.delete-btn {
+    cursor: pointer;
+    color: red;
+}
+
+.delete-btn:hover {
+    text-decoration: underline;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+button {
+    margin-bottom: 10px;
+}

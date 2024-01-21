@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerija Slika</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background: #F1D8CD;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+
+        .card {
+            width: 17rem;
+            margin: 30px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" style="align-items: center; justify-content: center;">
+        <ul class="nav justify-content-center navbar-nav" style="text-align: center;">
+            <li><b><a style="text-align: center;"id="plantType" href="#">Vrsta biljaka</a></b></li>
+        </ul>
+    </nav>
+    <h1 style="text-align: center;">Galerija slika</h1><br>
+    <div class="container">
+        <form id="frmUploadImage" action="/uploadImage" method="post" enctype="multipart/form-data" class="form-inline">
+            <input type="hidden" name="plant_id" value="${getQueryParameter('plantId')}">
+            <div class="form-group mx-sm-3 mb-2">
+                <label for="description" class="sr-only">Opis:</label>
+                <input type="text" class="form-control" id="description" name="description" placeholder="Opis" required>
+            </div>
+            <div class="form-group mx-sm-3 mb-2">
+                <label for="image" class="sr-only">Slika:</label>
+                <input type="file" class="form-control" id="image" name="image" accept="image/*" required>
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Upload</button>
+        </form>
+
+        <div class="row" id="imageGalleryContainer"></div>
+    </div>
+
+    <script src="../js/image_gallery.js"></script>
+
+</body>
+
+</html>
